@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Birthday for Maprang</title>
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  </head>
+  <body>
+    
+<div id="sec1" class="container-fluid" style="background: linear-gradient(135deg, #fff5f6 0%, #ffd1dc 50%, #ffecb3 100%); padding: 6% 0; min-height: 80vh; display: flex; align-items: center; transition: all 1s ease;">
+    <div class="row align-items-center justify-content-center g-4 w-100 m-0">
+        
+        <div id="maprang" class="col-md-5 d-none d-md-flex sweet-float" style="justify-content: center;">
+            <div style="position: relative; width: 100%; max-width: 450px; background: rgba(255, 255, 255, 0.3); backdrop-filter: blur(8px); padding: 30px; border-radius: 50%; border: 2px solid rgba(255,255,255,0.5); box-shadow: 0 15px 35px rgba(216, 27, 96, 0.1);">
+                <svg viewBox="0 0 600 600" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 5; pointer-events: none;">
+                    <path id="curve-left" fill="transparent" d="M 300, 300 m -240, 0 a 240,240 0 1,1 480,0 a 240,240 0 1,1 -480,0" />
+                    <text style="font-family: 'Pacifico', cursive; font-size: 58px; fill: #d81b60; text-shadow: 2px 2px 0px white;">
+                        <textPath xlink:href="#curve-left" startOffset="50%" text-anchor="middle">Maprang</textPath>
+                    </text>
+                </svg>
+                <img src="./pics/m.jpg" class="profile-img" style="width: 100%; border: 12px solid white; border-radius: 50%; object-fit: cover; aspect-ratio: 1/1; position: relative; z-index: 1; box-shadow: 0 8px 25px rgba(0,0,0,0.1);">
+            </div>
+        </div>
+
+        <div id="heart" class="col-12 col-md-2 text-center" style="z-index: 10;">
+            <button id="heartBtn" style="border: none; background: transparent; outline: none; transition: transform 0.3s; cursor: pointer;" onclick="showBirthday()">
+                <h1 style="font-size: clamp(120px, 40vw, 150px); filter: drop-shadow(0 0 20px #ff69b4); margin: 0;">💝</h1>
+                <p class="d-md-none" style="font-family: 'Pacifico', cursive; color: #d81b60; margin-top: 10px;">Tap for a Surprise</p>
+            </button>
+        </div>
+
+        <div id="nice" class="col-md-5 d-none d-md-flex sweet-float" style="justify-content: center; animation-delay: 0.5s;">
+            <div style="position: relative; width: 100%; max-width: 450px; background: rgba(255, 255, 255, 0.3); backdrop-filter: blur(8px); padding: 30px; border-radius: 50%; border: 2px solid rgba(255,255,255,0.5); box-shadow: 0 15px 35px rgba(216, 27, 96, 0.1);">
+                <svg viewBox="0 0 600 600" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 5; pointer-events: none;">
+                    <path id="curve-right" fill="transparent" d="M 300, 300 m -240, 0 a 240,240 0 1,1 480,0 a 240,240 0 1,1 -480,0" />
+                    <text style="font-family: 'Pacifico', cursive; font-size: 58px; fill: #d81b60; text-shadow: 2px 2px 0px white;">
+                        <textPath xlink:href="#curve-right" startOffset="50%" text-anchor="middle">Nice</textPath>
+                    </text>
+                </svg>
+                <img src="./pics/n.jpg" class="profile-img" style="width: 100%; border: 12px solid white; border-radius: 50%; object-fit: cover; aspect-ratio: 1/1; position: relative; z-index: 1; box-shadow: 0 8px 25px rgba(0,0,0,0.1);">
+            </div>
+        </div>
+
+        <div id="bdayMessage" class="col-12 text-center" style="display: none; margin-top: 30px;">
+            <div class="jiggle-animation" style="display: inline-block;">
+                <h1 style="font-family: 'Pacifico', cursive; color: #d81b60; font-size: clamp(50px, 15vw, 100px); text-shadow: 3px 3px 0px #fff;">
+                    Happy Birthday!
+                </h1>
+            </div>
+        </div>
+
+    </div>
+</div>
+    
+
+
+
+<div class="container px-4 py-5 my-5 text-center">
+    <div class="row justify-content-center g-5">
+        <h1 class="sweet-title display-4 fw-bold">First Meet</h1>
+        <div class="col-12 col-md-6 d-flex flex-column align-items-center">
+            <div style="width: 100%; max-width: 500px; aspect-ratio: 1/1; overflow: hidden; border-radius: 15px;">
+                <video style="width: 100%; height: 100%; object-fit: cover;" autoplay loop muted playsinline>
+                    <source src="./pics/20250910_194531.mp4" type="video/mp4">
+                </video>
+            </div>
+            <h1 class="display-5 fw-bold text-body-emphasis mt-3">Polycat</h1>
+            <p class="lead">Kasetsart University</p>
+        </div>
+
+        <div class="col-12 col-md-6 d-flex flex-column align-items-center">
+            <div style="width: 100%; max-width: 500px; aspect-ratio: 1/1; overflow: hidden; border-radius: 15px;">
+                <video style="width: 100%; height: 100%; object-fit: cover;" autoplay loop muted playsinline>
+                    <source src="./pics/20250910_182128.mp4" type="video/mp4">
+                </video>
+            </div>
+            <h1 class="display-5 fw-bold text-body-emphasis mt-3">Tofu</h1>
+            <p class="lead">Kasetsart University</p>
+        </div>
+
+    </div>
+</div>
+
+
+
+<div class="sweet-hero-section">
+    <div class="container col-xxl-8 px-4 py-5"> 
+        <div class="row flex-lg-row-reverse align-items-center g-5 py-5"> 
+            <div class="col-12 col-lg-6 text-center"> 
+                <button class="img-button" onclick="changephoto()">
+                    <img src="./pics/kara.jpg" alt="First Date">
+                </button>
+            </div> 
+            <div class="col-lg-6 text-center text-lg-start"> 
+                <h1 class="sweet-title display-4 fw-bold">First Date</h1>
+                <p class="lead mb-1"><strong>📍 Major Cineplex Ratchayothin</strong></p> 
+                <p class="lead">"Maprang came late"</p> 
+                <p class="lead">"Maprang don't like Yayoi's Udon"</p> 
+                <p class="lead">"Maprang hold my hand for the first time"</p> 
+            </div> 
+        </div> 
+
+        <div class="row align-items-center g-5 py-5"> 
+            <div class="col-12 col-lg-6 text-center"> 
+                <button class="img-button" onclick="changephoto2()">
+                    <img src="./pics/1763739283679.jpg" alt="Confession">
+                </button>
+            </div> 
+            <div class="col-lg-6 text-center text-lg-start"> 
+                <h1 class="sweet-title display-4 fw-bold">Confession</h1>
+                <p class="lead mb-1"><strong>📍 Pantip Plaza Ngamwongwan</strong></p> 
+                <p class="lead">"Maprang have an amazing looks"</p> 
+                <p class="lead">"Nice buy sweater for Maprang"</p> 
+                <p class="lead">"Maprang got scammed for 150 THB"</p> 
+            </div> 
+        </div> 
+    </div>
+</div>
+
+<section class="py-5 text-center container">
+  <div class="row py-lg-5">
+    <div class="col-lg-6 col-md-8 mx-auto">
+      <h1 class="fw-light">Memories</h1>
+    </div>
+  </div>
+</section>
+
+<div class="album py-5 bg-body-tertiary">
+  <div class="container">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+
+      <div class="col">
+        <div class="card shadow-sm h-100">
+          <iframe src="https://drive.google.com/file/d/1pVOuf8SYrOybkDYriQlf3PiFBh1M3Jti/preview" width="100%" height="325" style="border:none;"></iframe>
+          <div class="card-body">
+            <p class="card-text">Maprang and her red sweater, My little red hoodies</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <small class="text-body-secondary">17/03/2026</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card shadow-sm h-100">
+          <iframe src="https://drive.google.com/file/d/1z5rrdvmt7iurWNdmYpRrYeK9rz3DYTlA/preview" width="100%" height="325" style="border:none;"></iframe>
+          <div class="card-body">
+            <p class="card-text">Kaset Fair, Maprang is having fun with the song</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <small class="text-body-secondary">06/02/2026</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card shadow-sm h-100">
+          <iframe src="https://drive.google.com/file/d/1p8SfJ5aufj_EKF7QZNN7Pn9xSlr3Ne4O/preview" width="100%" height="325" style="border:none;"></iframe>
+          <div class="card-body">
+            <p class="card-text">Valentine's present for Maprang</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <small class="text-body-secondary">13/02/2026</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card shadow-sm h-100">
+          <iframe src="https://drive.google.com/file/d/1z10RFQ2xxHZkLIK1HDIO0KwEDTyIUK5e/preview" width="100%" height="325" style="border:none;"></iframe>
+          <div class="card-body">
+            <p class="card-text">Maprang's first time eating EAT am ARE </p>
+            <div class="d-flex justify-content-between align-items-center">
+              <small class="text-body-secondary">15/01/2026</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card shadow-sm h-100">
+          <iframe src="https://drive.google.com/file/d/1Ls1KwAFp7J4suZS2d2U0K25Xf9vmrT7R/preview" width="100%" height="325" style="border:none;"></iframe>
+          <div class="card-body">
+            <p class="card-text">Maprang and her engineer boyfriend</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <small class="text-body-secondary">06/02/2026</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card shadow-sm h-100">
+          <iframe src="https://drive.google.com/file/d/1rUwxAIjPQn9skBGftNwI1_AvN1GE77-v/preview" width="100%" height="325" style="border:none;"></iframe>
+          <div class="card-body">
+            <p class="card-text">Nice trying to film pigeons and Maprang</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <small class="text-body-secondary">24/03/2026</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="px-4 pt-5 my-5 text-center border-bottom"> 
+    <h1 class="display-4 fw-bold text-body-emphasis">Happy Birthday My Love</h1> 
+    <div class="col-lg-6 mx-auto"> 
+        <p class="lead mb-4">Wish you all the best, may you live happyily with me and families for eternity. May everyone treat you good and wise, may your life treated like I wished for you. Come the wealthy and kindness to your life, I love you forever.</p> 
+    </div> 
+    <div class="overflow-hidden" style="max-height: 55vh;"> 
+        <div class="container px-5"> 
+            <img src="./pics/love.jpg" class="img-fluid border rounded-3 shadow-lg mb-4" alt="Love image" width="700" height="500" loading="lazy"> 
+        </div> 
+    </div> 
+</div>
+
+<div class="post-board-container py-5">
+    <div class="container">
+        <div class="row g-4 justify-content-center">
+            <div class="col-6 col-md-4 col-lg-3"><div class="polaroid" style="--angle: -2deg;"><img src="./pics/20260216_191534.jpg" alt="Memory"><p class="caption">Bad girl</p></div></div>
+            <div class="col-6 col-md-4 col-lg-3"><div class="polaroid" style="--angle: 5deg;"><img src="./pics/20260324_190118.jpg" alt="Memory"><p class="caption">Cuteness</p></div></div>
+            <div class="col-6 col-md-4 col-lg-3"><div class="polaroid" style="--angle: 5deg;"><img src="./pics/20260324_190332.jpg" alt="Memory"><p class="caption">Sexy Maprang</p></div></div>
+            <div class="col-6 col-md-4 col-lg-3"><div class="polaroid" style="--angle: 5deg;"><img src="./pics/20260129_122633.jpg" alt="Memory"><p class="caption">Where are you going?</p></div></div>
+            <div class="col-6 col-md-4 col-lg-3"><div class="polaroid" style="--angle: -2deg;"><img src="./pics/20260127_165702.jpg" alt="Memory"><p class="caption">Holding hands</p></div></div>
+            <div class="col-6 col-md-4 col-lg-3"><div class="polaroid" style="--angle: 5deg;"><img src="./pics/20260206_170455.jpg" alt="Memory"><p class="caption">Cute girl</p></div></div>
+            <div class="col-6 col-md-4 col-lg-3"><div class="polaroid" style="--angle: 5deg;"><img src="./pics/20260324_190137.jpg" alt="Memory"><p class="caption">My future WIFE!!</p></div></div>
+            <div class="col-6 col-md-4 col-lg-3"><div class="polaroid" style="--angle: -5deg;"><img src="./pics/FB_IMG_1772297714385.jpg" alt="Memory"><p class="caption">Who is this?</p></div></div>
+            <div class="col-6 col-md-4 col-lg-3"><div class="polaroid" style="--angle: 5deg;"><img src="./pics/20260321_185517.jpg" alt="Memory"><p class="caption">My little angle</p></div></div>
+            <div class="col-6 col-md-4 col-lg-3"><div class="polaroid" style="--angle: -5deg;"><img src="./pics/Screenshot_20260308_192254_Facebook.jpg" alt="Memory"><p class="caption">Good grandson</p></div></div>
+        </div>
+    </div>
+</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="./script.js"></script>
+</body>
+</html>

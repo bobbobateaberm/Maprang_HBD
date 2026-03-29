@@ -1,0 +1,219 @@
+    /* Import a sweet cursive font */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+/* Import a handwritten font for the captions */
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+.post-board-container {
+    background-color: #f8f9fa; /* Light grey 'wall' background */
+    background-image: radial-gradient(#d26c6c 2px, transparent 0.5px); /* Subtle corkboard dots */
+    background-size: 20px 20px;
+}
+
+.polaroid {
+    background: white;
+    padding: 15px 15px 30px 15px; /* Extra bottom padding for the caption */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    border: 1px solid #ddd;
+    transition: all 0.3s ease;
+    
+    /* This uses the --angle variable from the HTML */
+    transform: rotate(var(--angle)); 
+}
+
+.polaroid img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border: 1px solid #eee;
+}
+
+.polaroid .caption {
+    font-family: 'Indie Flower', crossorigin;
+    font-size: 1.4rem;
+    text-align: center;
+    color: #555;
+    margin-top: 15px;
+}
+
+/* Hover effect: The photo 'lifts' off the board */
+.polaroid:hover {
+    transform: rotate(0deg) scale(1.1);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.25);
+    z-index: 10;
+    cursor: pointer;
+}
+
+body{
+    padding-right: auto;
+    padding-right: auto;
+}
+
+.heart{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    font-size: 150px;
+}
+
+/* Target the image inside your photo-change button */
+button img {
+    transition: opacity 0.3s ease-in-out;
+    opacity: 1; /* Default state is visible */
+}
+
+/* Optional: remove button border for a cleaner look */
+button {
+    border: none;
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
+    outline: none;
+}
+/* This makes the SVG text container scale with the image */
+    .profile-container {
+        position: relative;
+        width: 100%;
+        max-width: 450px; /* Limits size on desktop */
+        aspect-ratio: 1/1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+    }
+
+
+/* Styling for the curved names (Maprang & Nice) */
+.curved-text-svg text {
+    font-family: 'Pacifico', cursive; /* Sweet cursive font */
+    font-size: 55px; /* Bigger size */
+    fill: #ffffff;
+    text-shadow: 2px 2px 8px rgba(255, 105, 180, 0.8); /* Soft pink glow */
+    letter-spacing: 2px;
+}
+
+/* Styling for the Birthday Message */
+#bdayMessage h1 {
+    font-family: 'Pacifico', cursive;
+    color: #fff;
+    /* Layered shadows for a "Neumorphic" sweet glow */
+    text-shadow: 
+        0 0 10px #fff,
+        0 0 20px #ff69b4,
+        0 0 30px #ff69b4,
+        0 0 40px #ff1493;
+    transition: all 0.5s ease;
+}
+
+/* Optional: Add a floating animation to the heart */
+#heartBtn h1 {
+    animation: floating 3s ease-in-out infinite;
+}
+
+@keyframes floating {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0px); }
+}
+
+    
+.curved-text-svg {
+        position: absolute;
+        width: 110%; /* Slightly larger than the image */
+        height: 110%;
+        transform: rotate(-90deg);
+        pointer-events: none; /* Allows clicking through the text to the image */
+    }
+
+/* Adjust font size for mobile */
+@media (max-width: 576px) {
+    .curved-text-svg text {
+        font-size: 50px; /* Larger relative font for small screens */
+    }
+}
+
+
+
+@keyframes jiggle {
+    0% { transform: translate(0,0) rotate(-1deg); }
+    25% { transform: translate(1px, 1px) rotate(1deg); }
+    50% { transform: translate(-1px, -1px) rotate(-1.5deg); }
+    75% { transform: translate(1px, -1px) rotate(1.5deg); }
+    100% { transform: translate(0,0) rotate(-1deg); }
+}
+
+.jiggle-text {
+    display: inline-block;
+    /* This tells the browser to use the GPU, preventing lag */
+    will-change: transform; 
+    animation: jiggle 0.3s linear infinite;
+    /* Prevents the text from blurring during animation */
+    backface-visibility: hidden;
+    -webkit-font-smoothing: antialiased;
+}
+
+
+.sweet-hero-section {
+    /* A softer, creamier pink-to-peach gradient */
+    background: linear-gradient(135deg, #fff5f5 0%, #ffd1dc 100%);
+    color: #5d4037; /* Soft chocolate brown text instead of harsh black/white */
+}
+
+/* Make the photo buttons responsive */
+.img-button {
+    border: 8px solid white;
+    padding: 0;
+    background: none;
+    outline: none;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    width: 100%; /* Important for responsiveness */
+    max-width: 400px;
+    object-fit: cover;
+}
+
+.img-button:hover {
+    transform: scale(1.05) rotate(2deg);
+}
+
+.img-button img {
+    width: 100%; /* Image fills the button */
+    height: auto;
+    aspect-ratio: 1/1; /* Keeps it square */
+    display: block;
+    object-fit: cover;
+}
+
+.sweet-title {
+    font-family: 'Pacifico', cursive;
+    color: #d81b60; /* Deep pink for headers */
+}
+
+
+/* Floating animation for profiles */
+    @keyframes float {
+        0% { transform: translateY(0px); }
+        50% { transform: translateY(-15px); }
+        100% { transform: translateY(0px); }
+    }
+
+    /* Refined Jiggle for the Birthday text */
+    @keyframes sweetJiggle {
+        0% { transform: rotate(-1deg); }
+        50% { transform: rotate(1deg) scale(1.02); }
+        100% { transform: rotate(-1deg); }
+    }
+
+    .sweet-float { animation: float 4s ease-in-out infinite; }
+    .jiggle-animation { animation: sweetJiggle 0.5s infinite; }
+    
+    /* Hover effect for photos */
+    .profile-img:hover {
+        transform: scale(1.05);
+        border-color: #ffdae0 !important;
+        transition: all 0.3s ease;
+    }
+
+
