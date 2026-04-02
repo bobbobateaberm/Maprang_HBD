@@ -28,7 +28,9 @@ function changephoto() {
     const photos = [
         "./pics/IMG_20251030_215547_793.jpg",
         "./pics/IMG_20251115_025936_850.jpg",
-        "./pics/kara.jpg"
+        "./pics/kara.jpg",
+        "./pics/IMG_20260331_102148_885.jpg",
+        "./pics/IMG_20260331_102148_886.jpg"
 
     ];
 
